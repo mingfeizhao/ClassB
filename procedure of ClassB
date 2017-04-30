@@ -1,6 +1,9 @@
 The procedure of ClassB
-ping.intvExp  define the interval time of the beacon. the actually time is (1<<ping.intvExp) seconds.
-
+1. ping.intvExp  define the interval time of the beacon. the actually time is (1<<ping.intvExp) seconds.
+2. bcninfo.txtime define the time which gateway start to transmit beacon.
+3. bcninfo.time   define the UTC time (unit is seconds) get from the gateway
+4. bcnRxtime      define the next details time which the mote should open the beacon receive window to get the beacon
+5. calcRxWindow (u1_t secs, dr_t dr)  
 
 ISSUE:
 1. strange to set ping initialize after txdone. refer line 243
