@@ -1,0 +1,2 @@
+The procedure of ClassB
+ping.intvExp  define the interval time of the beacon. the actually time is (1<<ping.intvExp) seconds.
