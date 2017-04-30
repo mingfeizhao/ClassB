@@ -1,2 +1,6 @@
 The procedure of ClassB
 ping.intvExp  define the interval time of the beacon. the actually time is (1<<ping.intvExp) seconds.
+
+
+ISSUE:
+1. strange to set ping initialize after txdone. refer line 243
