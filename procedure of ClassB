@@ -3,7 +3,12 @@ The procedure of ClassB
 2. bcninfo.txtime define the time which gateway start to transmit beacon.
 3. bcninfo.time   define the UTC time (unit is seconds) get from the gateway
 4. bcnRxtime      define the next details time which the mote should open the beacon receive window to get the beacon
-5. calcRxWindow (u1_t secs, dr_t dr)  
+5. calcRxWindow (u1_t secs, dr_t dr)  to caculate the timeout symbols to receive beacon, if the diff of the time is bigger than 0, the rx window will be larger
+    according to the differ.
+6. rxsched->intvExp  define the times of the ping slot which will come into the interrupt.
 
 ISSUE:
 1. strange to set ping initialize after txdone. refer line 243
+2. strange that if one beacon missed just one more symbol be plused to the bcnRxsyms  refer line 1652
+3. rexsched->rxbase : why the rxbase has a random offset? it's will be known by the server and the mote? line 154
+4. 
