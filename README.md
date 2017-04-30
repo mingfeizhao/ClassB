@@ -1,0 +1,2 @@
+# ClassB
+description of ClassB
